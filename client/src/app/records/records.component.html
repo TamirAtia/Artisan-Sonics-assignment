@@ -1,0 +1,28 @@
+<input
+  type="text"
+  [(ngModel)]="searchTerm"
+  (ngModelChange)="filterRecords()"
+  placeholder="Search by ID, first name, or last name"
+/>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>DOB</th>
+    <th (click)="sortRecords('age')">Age</th>
+    <th>LMP</th>
+    <th (click)="sortRecords('ga')">GA</th>
+  </tr>
+  
+  <tr *ngFor="let record of filteredRecords">
+    <td>{{ record.id }}</td>
+    <td>{{ record.first_name }}</td>
+    <td>{{ record.last_name }}</td>
+    <td>{{ record.dob | date : "dd/MM/yyyy" }}</td>
+    <td>{{ record.dob | age }}</td>
+    <td>{{ record.lmp | date : "dd/MM/yyyy" }}</td>
+    <td>{{ record.lmp | lmp }}</td>
+  </tr>
+</table>
