@@ -24,7 +24,7 @@ Before you can run the project, you need to make sure you have the following dep
 ## Development environment setup
 1. Clone the repository to your local machine:
 ```bash
-git clone https://github.com/TamirAtia/artisansonics.git
+git clone https://github.com/TamirAtia/Artisan-Sonics-assignment.git
 ```
 2. Navigate to the project directory:
 ```bash
